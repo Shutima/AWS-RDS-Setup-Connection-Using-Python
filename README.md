@@ -28,8 +28,8 @@
 ![createDB3](https://user-images.githubusercontent.com/57285863/69810966-5a696780-11ed-11ea-8da9-f2929aa1e80b.png)
 6. In **DB Instance Size**, set these values:
    - DB instance performance type: Burstable
-   - DB instance class: db.t2.small
-![createDB4](https://user-images.githubusercontent.com/57285863/69811172-cb108400-11ed-11ea-956a-4cd99495bdf9.png)
+   - DB instance class: db.t2.micro
+![DBcreateNew2](https://user-images.githubusercontent.com/57285863/70054100-24eec080-15d7-11ea-90a0-df26377c9a5b.png)
 7. In the **Storage** and **Availability & Durability** section, use the default values
 8. In the **Connectivity** section, open the **Additional connectivity configuration** and set these values:
    - **Virtual Private Cloud (VPC)**: choose an existing VPC that you created before with public subnets or creating new one. For this workshop, you need to be able to access the database publicly therefore make sure to have the internet connection on your security group
@@ -39,8 +39,8 @@
    - **VPC Security Group**: Choose an existing VPC Security Group that is configured for the private access (such as the security group of the Jump Box Web Server workshop). Remove other security groups, such as the default security group, by choosing the **X** associated with each.
    - **Availability Zone**: No Preference
    - **Database port**: 3306
-![createDB5](https://user-images.githubusercontent.com/57285863/69813065-bfbf5780-11f1-11ea-866a-b7407f843593.png)
-![createDB6](https://user-images.githubusercontent.com/57285863/69813092-ce0d7380-11f1-11ea-9ec7-db1579e403a6.png)
+![DBcreateNew1](https://user-images.githubusercontent.com/57285863/70053964-e0fbbb80-15d6-11ea-8d7b-92a1bac5bf0c.png)
+![DBcreateNew3](https://user-images.githubusercontent.com/57285863/70054038-04266b00-15d7-11ea-9e1a-a0c3de546871.png)
 9. Open **Additional Configuration**, enter sample for **Initial database name**. Then keep the rest of the configuraton default.
 10. If you get an error that the database cannot be created because your VPC chosen doesn't support DNS/Hostname resolution, please follow these steps:
    - Go to VPC page and select the VPC that you used. Then, Actions > Edit DNS resolution
