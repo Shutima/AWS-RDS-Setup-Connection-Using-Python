@@ -75,6 +75,11 @@
 ![MySQLWorkbench4](https://user-images.githubusercontent.com/57285863/70044572-e949fb80-15c2-11ea-864c-5cc4db93eaa8.png)
 
 ## Step 3: Connect to the AWS RDS Database using Python
-
+1. For this step you can either create a new Linux instance on AWS and run the python commands there. Or you can also do this on your local PC.
+2. Open jupyter notebook or any Python terminal
+3. Enter the following script in the jupyter notebook
+> **_NOTE:_** 
+> # Install pymysql package 
+> pip install pymysql
 
 
