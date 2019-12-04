@@ -94,4 +94,44 @@ port=3306
 dbname="sample"
 user="admin"
 password="password"
+
+# Now we will connect to the AWS RDS Database using the command pymysql.connect with the Database details from above.
+# Then we store this value in the variable "connection"
+connection = pymysql.connect(database_instance_endpoint,
+                      user = user,
+                      port = port,
+                      passwd = password,
+                      database = dbname)
+
+# Declare varaiable for mycur which is a cursor. We need a cursor to query the database
+# Using cursor, we can connect to the database
+mycur = connection.cursor()
+
+# Using MySQL query to create a new table called "students" with columns: id, firstname, lastname, grade with id as PRIMARY KEY
+# Store the MySQL command in a variable "create_table_query"
+create_table_query="""CREATE TABLE IF NOT EXISTS `students` (
+                    `id` int(11) NOT NULL AUTO_INCREMENT,
+                    `firstname` varchar(255) NOT NULL,`lastname` varchar(255) NOT NULL,`grade` varchar(10),
+                     PRIMARY KEY (`id`)
+                     ) ENGINE=INNODB;"""
+
+# Using cursor to execute the command to create the table				
+mycur.execute(create_table_query)
+
+# Using MySQL command to insert a data row into the students table.
+# Keey this MySQL command in the variable "insert_query"
+insert_query="INSERT INTO `students` (`id`, `firstname`, `lastname`) VALUES (%s, %s, %s)"
+
+# Using cursor to execute the insert query command to add more data into the table
+mycur.execute(insert_query, ('12345', 'Tata', 'Tutu'))
+mycur.execute(insert_query, ('34567', 'Momo', 'Meme'))
+
+# Run the commit command to commit the change into the database
+connection.commit()
+
+# Check the result by query all the data from the students table
+mycur.execute("SELECT * FROM students")
+
+# Run the command to display the database table
+mycur.fetchall()
 ```
