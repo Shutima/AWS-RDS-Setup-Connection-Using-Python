@@ -79,7 +79,7 @@
 2. Open jupyter notebook or any Python terminal
 3. Enter the following script in the jupyter notebook
 > **_NOTE:_** 
-> # Install pymysql package 
+> #Install pymysql package 
 > pip install pymysql
 
 
