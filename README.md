@@ -89,10 +89,16 @@
 > #port = 3306 which is the port for MySQL
 > #user = the Master Username defined in AWS RDS DB
 > #password = password defined when creating DB
+>
 > import pymysql
+>
 > database_instance_endpoint="tutorial-db-instance.cmwix84nntpy.us-east-1.rds.amazonaws.com"
+>
 > port=3306
+>
 > dbname="sample"
+>
 > user="admin"
+>
 > password="password"
 
