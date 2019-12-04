@@ -79,7 +79,14 @@
 2. Open jupyter notebook or any Python terminal
 3. Enter the following script in the jupyter notebook
 
-> #Install pymysql package 
+> #Install pymysql package
+>
 > pip install pymysql
-
+>
+> #Import pymysql package to do database programming with Python. Here we set the values for varaiables
+>
+> #database_instance_endpoint = the db endpoint from AWS RDS Interface
+> #port = 3306 which is the port for MySQL
+> #user = the Master Username defined in AWS RDS DB
+> #password = password defined when creating DB
 
