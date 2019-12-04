@@ -80,9 +80,9 @@
 3. Enter the following script in the jupyter notebook
 
 > #Install pymysql package
->
+
 > pip install pymysql
->
+
 > #Import pymysql package to do database programming with Python. Here we set the values for varaiables
 >
 > #database_instance_endpoint = the db endpoint from AWS RDS Interface
