@@ -80,7 +80,6 @@
 3. Enter the following script in the jupyter notebook
 
 > #Install pymysql package 
-> 
 > pip install pymysql
 
 
