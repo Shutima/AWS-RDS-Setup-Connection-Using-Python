@@ -78,8 +78,9 @@
 1. For this step you can either create a new Linux instance on AWS and run the python commands there. Or you can also do this on your local PC.
 2. Open jupyter notebook or any Python terminal
 3. Enter the following script in the jupyter notebook
-> **_NOTE:_** 
+
 > #Install pymysql package 
+> 
 > pip install pymysql
 
 
